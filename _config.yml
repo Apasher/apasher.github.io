@@ -1,6 +1,6 @@
 theme: jekyll-theme-cayman
 title: Apasher's Blog
-description: A site for general blogging about topics related to capturing retro console games, and playing on CRT displays.
+description: A site for documentation and general blogging about topics related to capturing retro console games, and playing on CRT displays.
 
 header_pages:
   - archive.html
