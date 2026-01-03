@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Aspect-Ratio-Correction-Guide"
-date: 2026-01-02
+date: 2026-01-03 00:17:00 -0000
 categories: game-capture retro-gaming
 ---
 
