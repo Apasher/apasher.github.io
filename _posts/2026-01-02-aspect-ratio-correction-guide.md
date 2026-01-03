@@ -246,11 +246,9 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 ## <span style="text-decoration:underline;">650px Games (Ex. Tony Hawk’s Pro Skater 4)</span>
 
 **Resolution (NTSC):** 650x448  
-**Resolution (PAL):** 650x528  
-**Storage Aspect Ratio (SAR):** 325:224 (NTSC), 325:264 (PAL)  
+**Storage Aspect Ratio (SAR):** 325:224 (NTSC)  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 650 * (10/11) = <span style="text-decoration:underline;">590x448 (295:224)</span>  
-**4:3-adjusted DAR (PAL):** 650 * (10/11) = <span style="text-decoration:underline;">590x528 (295:264)</span>  
+**4:3-adjusted DAR (NTSC):** 650 * (10/11) = <span style="text-decoration:underline;">590x448 (295:224)</span>   
 
 ## <span style="text-decoration:underline;">656px Games (Ex. Prince of Persia: The Two Thrones)</span>
 
