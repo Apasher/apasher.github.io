@@ -1,3 +1,8 @@
+layout: post
+title: "Aspect-Ratio-Correction-Guide"
+date: 2026-01-02 hh:mm:ss -0000
+categories: game-capture retro-gaming
+
 # “Your aspect ratio is wrong”  
 ## A guide to aspect ratio correction for retro console games by Apasher
 
