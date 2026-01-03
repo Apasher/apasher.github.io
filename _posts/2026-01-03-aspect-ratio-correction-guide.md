@@ -95,7 +95,7 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 256x240  
 **Storage Aspect Ratio (SAR):** 16:15  
 **Pixel Aspect Ratio (PAR):** 8:7  
-**4:3-adjusted DAR (NTSC):** 256 * (8/7) =** **<span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 256 * (8/7) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
 
 ## <span style="text-decoration:underline;">320px Games</span>
 
@@ -228,6 +228,8 @@ The Saturn works differently from the PS1, in that it has the same dot clock rat
 
 (more information needed: dot clock @ 640x240)
 
+# PlayStation 2
+(coming soon)
 
 # GameCube/Wii
 
