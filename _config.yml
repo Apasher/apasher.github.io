@@ -1,5 +1,14 @@
 theme: jekyll-theme-cayman
 title: Apasher's Blog
 description: A site for general blogging about topics related to capturing retro console games, and playing on CRT displays.
+
 plugins:
   - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      tags:
+        - Other # Add a default tag to all posts
