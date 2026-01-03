@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "Aspect-Ratio-Correction-Guide"
-date: 2026-01-03 00:17:00 -0000
+title: "Your Aspect Ratio is Wrong"
+description: A guide to aspect ratio correction for retro console games
+date: 2026-01-03 00:17:00 -0500
 categories: game-capture retro-gaming
 ---
-
-# “Your aspect ratio is wrong”  
-## A guide to aspect ratio correction for retro console games by Apasher
 
 Before we begin, I want to preface that there are three different types of aspect ratio, and it is important to know the difference between all three in order to understand how to do proper aspect ratio correction.
 
