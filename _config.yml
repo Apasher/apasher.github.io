@@ -29,3 +29,8 @@ defaults:
     values:
       tags:
         - Other # Add a default tag to all posts
+navigation:
+  name_over_title: true
+  strip_par: true
+  sanitize: true
+  h_max: 3
