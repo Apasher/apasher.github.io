@@ -68,7 +68,7 @@ Disclaimer: This guide will mainly be focused on NTSC, but I will update this pa
 ## <span style="text-decoration:underline;">256px Games</span>
 
 **Resolution (NTSC):** 256x224  
-**Storage Aspect Ratio (SAR):** 8:7 (NTSC)
+**Storage Aspect Ratio (SAR):** 8:7  
 **Pixel Aspect Ratio (PAR):** 8:7  
 **4:3-adjusted DAR (NTSC):** 256 * (8/7) = <span style="text-decoration:underline;">292x224 (73:56) </span>  
 
