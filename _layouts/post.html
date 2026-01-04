@@ -3,8 +3,6 @@ layout: default
 ---
 <article itemscope itemtype="http://schema.org/BlogPosting">
   
-
-    
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -21,15 +19,6 @@ layout: default
   <div class="share-links no-print">
     {% include sharelinks.html %}
   </div>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-    <div class="no-print">
-      {% include navlinks.html %}
-    </div>
-  </div>
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
   <head>
     <noscript><style> #sidebar { max-height: initial !important; } </style></noscript>
@@ -64,6 +53,15 @@ layout: default
     <script src="{{ '/assets/js/anchor_spy.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script src="{{ '/assets/js/navigator.js?v=' | append: site.github.build_revision | relative_url }}"></script>
   </body>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+    <div class="no-print">
+      {% include navlinks.html %}
+    </div>
+  </div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   
 </article>
 
