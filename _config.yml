@@ -17,6 +17,9 @@ collections:
   personal: # collection for personal blog posts
     output: true
 
+header pages:
+  - archive.html
+
 home_post_limit: 5
 
 defaults:
