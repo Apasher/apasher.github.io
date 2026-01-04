@@ -49,6 +49,9 @@
             </li>
               {%- endfor -%}
           </ul>
+          
+          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+        {%- endif -%}
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
