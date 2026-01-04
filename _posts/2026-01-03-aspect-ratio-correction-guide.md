@@ -75,7 +75,7 @@ Disclaimer: This guide will mainly be focused on NTSC, but I will update this pa
 ## <span style="text-decoration:underline;">320px Games</span>
 
 **Resolution (NTSC):** 320x224  
-**Storage Aspect Ratio (SAR):** 10:7 (NTSC)
+**Storage Aspect Ratio (SAR):** 10:7  
 **Pixel Aspect Ratio (PAR):** 32:25  
 **4:3-adjusted DAR (NTSC):** 320 * (32/25) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
 
