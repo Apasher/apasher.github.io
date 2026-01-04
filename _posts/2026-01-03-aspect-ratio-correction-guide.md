@@ -3,6 +3,7 @@ layout: post
 title: "Your Aspect Ratio is Wrong"
 description: A guide to aspect ratio correction for retro console games
 date: 2026-01-03 00:17:00 -0500
+author: Apasher
 categories: retro-gaming game-capture
 ---
 
