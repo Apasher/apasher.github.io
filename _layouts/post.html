@@ -36,14 +36,6 @@ layout: default
       {% include toc.html html=content sanitize=n.sanitize strip_par=n.strip_par class=n.class id=n.id h_min=n.h_min h_max=n.h_max ordered=n.ordered item_class=n.item_class submenu_class=n.submenu_class base_url=n.base_url anchor_class=n.anchor_class skip_no_ids=n.skip_no_ids %}
     </nav>
   </aside>
-  
-  <div class="main-wrapper">
-    <main id="content" class="main-content" role="main">
-      <div id="content-wrapper">
-        {% include anchor_headings.html html=content anchorBody="#" beforeHeading=true anchorClass="heading-anchor" anchorTitle="%heading%" %}
-      </div>
-    </main>
-  </div>
 
   <div class="share-links no-print">
     {% include sharelinks.html %}
@@ -55,6 +47,15 @@ layout: default
       {% include navlinks.html %}
     </div>
   </div>
+  
+  <div class="main-wrapper">
+    <main id="content" class="main-content" role="main">
+      <div id="content-wrapper">
+        {% include anchor_headings.html html=content anchorBody="#" beforeHeading=true anchorClass="heading-anchor" anchorTitle="%heading%" %}
+      </div>
+    </main>
+  </div>
+  
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   <script src="{{ '/assets/js/js_enabled.js?v=' | append: site.github.build_revision | relative_url }}"></script>
   <script src="{{ '/assets/js/anchor_spy.js?v=' | append: site.github.build_revision | relative_url }}"></script>
