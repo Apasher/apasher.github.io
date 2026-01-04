@@ -29,7 +29,7 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
  
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
+  {% if site.comments_repo %}
+    {% include comments.html %}
   {% endif %}
 </article>
