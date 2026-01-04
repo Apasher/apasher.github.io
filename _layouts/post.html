@@ -15,15 +15,9 @@ layout: default
   <meta charset="UTF-8">
 </head>
 <body>
-  <aside id="sidebar">
-    <nav class="navigator" id="nav">
-      {% assign n=site.navigation %}
-      {% include toc.html html=content sanitize=n.sanitize strip_par=n.strip_par class=n.class id=n.id h_min=n.h_min h_max=n.h_max ordered=n.ordered item_class=n.item_class submenu_class=n.submenu_class base_url=n.base_url anchor_class=n.anchor_class skip_no_ids=n.skip_no_ids %}
-    </nav>
-  </aside>
+
   
   <article itemscope itemtype="http://schema.org/BlogPosting">
-  
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
       <p class="post-meta">
@@ -36,6 +30,13 @@ layout: default
           • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
         {% endif %}</p>
     </header>
+    
+    <aside id="sidebar">
+      <nav class="navigator" id="nav">
+        {% assign n=site.navigation %}
+        {% include toc.html html=content sanitize=n.sanitize strip_par=n.strip_par class=n.class id=n.id h_min=n.h_min h_max=n.h_max ordered=n.ordered item_class=n.item_class submenu_class=n.submenu_class base_url=n.base_url anchor_class=n.anchor_class skip_no_ids=n.skip_no_ids %}
+      </nav>
+    </aside>
 
     <div class="share-links no-print">
       {% include sharelinks.html %}
