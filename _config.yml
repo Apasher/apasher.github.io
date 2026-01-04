@@ -1,4 +1,5 @@
-theme: jekyll-theme-cayman
+theme: 
+remote_theme: Bilal2453/cayman-docs
 title: Apasher's Blog
 author: Apasher
 description: A site for documentation and general blogging about topics related to capturing retro console games, and playing on CRT displays.
