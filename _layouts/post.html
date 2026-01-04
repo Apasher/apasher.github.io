@@ -2,7 +2,36 @@
 layout: default
 ---
 <article itemscope itemtype="http://schema.org/BlogPosting">
-
+  
+  <head>
+    <noscript><style> #sidebar { max-height: initial !important; } </style></noscript>
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+    <meta charset="UTF-8">
+  </head>
+  
+  <body>
+    <aside id="sidebar">
+      <nav class="navigator" id="nav">
+        {% assign n=site.navigation %}
+        {% include toc.html html=content sanitize=n.sanitize strip_par=n.strip_par class=n.class id=n.id h_min=n.h_min h_max=n.h_max ordered=n.ordered item_class=n.item_class submenu_class=n.submenu_class base_url=n.base_url anchor_class=n.anchor_class skip_no_ids=n.skip_no_ids %}
+      </nav>
+    </aside>
+    
+    <div class="main-wrapper">
+      <main id="content" class="main-content" role="main">
+        <div id="content-wrapper">
+          {% include anchor_headings.html html=content anchorBody="#" beforeHeading=true anchorClass="heading-anchor" anchorTitle="%heading%" %}
+        </div>
+    </div>
+    
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
