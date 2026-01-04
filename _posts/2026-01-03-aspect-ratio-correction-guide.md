@@ -47,7 +47,7 @@ Disclaimer: This guide will mainly be focused on NTSC, but I will update this pa
 **Resolution (NTSC):** 512x240  
 **Storage Aspect Ratio (SAR):** 32:15  
 **Pixel Aspect Ratio (PAR):** 4:7  
-**4:3-adjusted DAR:** 512 * (4/7) =** **<span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR:** 512 * (4/7) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
 
 # Sega Master System
 
@@ -251,7 +251,7 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 ## <span style="text-decoration:underline;">650px Games (Ex. Tony Hawk’s Pro Skater 4)</span>
 
 **Resolution (NTSC):** 650x448  
-**Storage Aspect Ratio (SAR):** 325:224 (NTSC)  
+**Storage Aspect Ratio (SAR):** 325:224  
 **Pixel Aspect Ratio (PAR):** 10:11  
 **4:3-adjusted DAR (NTSC):** 650 * (10/11) = <span style="text-decoration:underline;">590x448 (295:224)</span>   
 
