@@ -319,6 +319,9 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 ## RetroRGB
 [Scaling Retro Gaming Captures with Virtualdub](https://retrorgb.com/virtualdub.html)  
 
+## R3 RGB Retro Resources
+[Wiki](http://r3.fyi/)
+
 ## Displaced Gamers
 [Super Nintendo Aspect Ratio](https://www.youtube.com/watch?v=ssluTgfkdlg)  
 [Capcom Arcade Aspect Ratio (CPS1 and CPS2)](https://www.youtube.com/watch?v=LHfPA4n0TRo)  
