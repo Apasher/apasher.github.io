@@ -80,8 +80,8 @@ Disclaimer: This guide will mainly be focused on NTSC, but I will update this pa
 
 **Resolution (NTSC):** 320x224  
 **Storage Aspect Ratio (SAR):** 10:7  
-**Pixel Aspect Ratio (PAR):** 32:25  
-**4:3-adjusted DAR (NTSC):** 320 * (32/25) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
+**Pixel Aspect Ratio (PAR):** 32:35  
+**4:3-adjusted DAR (NTSC):** 320 * (32/35) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
 
 # Neo Geo AES
 
@@ -105,8 +105,8 @@ Now we get to the console generation with games that run in various different re
 
 **Resolution (NTSC):** 320x240  
 **Storage Aspect Ratio (SAR):** 4:3  
-**Pixel Aspect Ratio (PAR):** 32:25  
-**4:3-adjusted DAR (NTSC):** 320 * (32/25) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**Pixel Aspect Ratio (PAR):** 32:35  
+**4:3-adjusted DAR (NTSC):** 320 * (32/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
 
 ## <span style="text-decoration:underline;">384px Games</span>
 
@@ -140,7 +140,7 @@ Now we get to the console generation with games that run in various different re
 ### Interlaced
 **Resolution (NTSC):** 640x480i  
 **Storage Aspect Ratio (SAR):** 4:3  
-**Pixel Aspect Ratio (PAR):** 32:25  
+**Pixel Aspect Ratio (PAR):** 32:35  
 **4:3-adjusted DAR (NTSC):** 640 * (32/25) = <span style="text-decoration:underline;">584x480i (73:60)</span>  
 
 # Sega Saturn
@@ -149,13 +149,13 @@ Now we get to the console generation with games that run in various different re
 
 **Resolution (NTSC):** 320x224  
 **Storage Aspect Ratio (SAR):** 10:7  
-**Pixel Aspect Ratio (PAR):** 307:336  
-**4:3-adjusted DAR (NTSC):** 320 * (307/336) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
+**Pixel Aspect Ratio (PAR):** 32:35  
+**4:3-adjusted DAR (NTSC):** 320 * (32/35) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
 
 **Resolution (NTSC):** 320x240  
 **Storage Aspect Ratio (SAR):** 4:3  
-**Pixel Aspect Ratio (PAR):** 307:336  
-**4:3-adjusted DAR (NTSC):** 320 * (307/336) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**Pixel Aspect Ratio (PAR):** 32:35  
+**4:3-adjusted DAR (NTSC):** 320 * (3532/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
 
 ## <span style="text-decoration:underline;">352px Games</span>
 
@@ -172,18 +172,26 @@ Now we get to the console generation with games that run in various different re
 ## <span style="text-decoration:underline;">640px Games</span>
 
 ### Progressive
-(More information needed: dot clock rate @ 640x224/240) 
+**Resolution (NTSC):** 640x224  
+**Storage Aspect Ratio (SAR):** 20:7  
+**Pixel Aspect Ratio (PAR):** 16:35  
+**4:3-adjusted DAR (NTSC):** 640 * (16/35) = <span style="text-decoration:underline;">292x224(73:56)</span>  
+
+**Resolution (NTSC):** 640x240  
+**Storage Aspect Ratio (SAR):** 8:3  
+**Pixel Aspect Ratio (PAR):** 16:35  
+**4:3-adjusted DAR (NTSC):** 640 * (16/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
 
 ### Interlaced
 **Resolution (NTSC):** 640x448i  
 **Storage Aspect Ratio (SAR):** 10:7  
-**Pixel Aspect Ratio (PAR):** 307:336  
-**4:3-adjusted DAR (NTSC):** 640 * (307/336) = <span style="text-decoration:underline;">584x448 (73:56)</span>  
+**Pixel Aspect Ratio (PAR):** 32:35  
+**4:3-adjusted DAR (NTSC):** 640 * (32/35) = <span style="text-decoration:underline;">584x448 (73:56)</span>  
 
 **Resolution (NTSC):** 640x480i  
 **Storage Aspect Ratio (SAR):** 4:3  
-**Pixel Aspect Ratio (PAR):** 307:336  
-**4:3-adjusted DAR (NTSC):** 640 * (307/336) = <span style="text-decoration:underline;">584x480 (73:60)</span>  
+**Pixel Aspect Ratio (PAR):** 32:35  
+**4:3-adjusted DAR (NTSC):** 640 * (32/35) = <span style="text-decoration:underline;">584x480 (73:60)</span>  
 
 ## <span style="text-decoration:underline;">704px Games</span>
 
