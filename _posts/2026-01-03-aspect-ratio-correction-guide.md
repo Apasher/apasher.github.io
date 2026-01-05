@@ -141,7 +141,7 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 640x480i  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 640 * (32/25) = <span style="text-decoration:underline;">584x480i (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (32/35) = <span style="text-decoration:underline;">584x480i (73:60)</span>  
 
 # Sega Saturn
 
@@ -155,7 +155,7 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 320x240  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 320 * (3532/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 320 * (32/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
 
 ## <span style="text-decoration:underline;">352px Games</span>
 
