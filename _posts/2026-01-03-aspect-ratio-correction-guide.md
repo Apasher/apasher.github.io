@@ -183,7 +183,7 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 640x480i  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 307:336  
-**4:3-adjusted DAR (NTSC):** 640 * (6/7) = <span style="text-decoration:underline;">548x480 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (307/336) = <span style="text-decoration:underline;">584x480 (73:60)</span>  
 
 ## <span style="text-decoration:underline;">704px Games</span>
 
