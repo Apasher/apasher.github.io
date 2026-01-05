@@ -8,6 +8,8 @@ categories: retro-gaming game-capture
 tags: Game-Capture
 ---
 
+#Introduction and Explanation
+
 Before we begin, I want to preface that there are three different types of aspect ratio, and it is important to know the difference between all three in order to understand how to do proper aspect ratio correction.
 
 **Pixel Aspect Ratio (PAR):** The proportion of pixels in an image. Square pixels are 1:1, but game consoles don’t always output square pixels. We will get to that later.
