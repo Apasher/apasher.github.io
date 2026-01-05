@@ -145,19 +145,17 @@ Now we get to the console generation with games that run in various different re
 
 # Sega Saturn
 
-The Saturn works differently from the PS1, in that it has the same dot clock rate regardless of a game’s horizontal resolution, with the exceptions being 640px games and 704px games. The Saturn has a “low-res” dot clock (7.16MHz @ 320px/352px), and a “high res” dot clock (14.3MHz @ 640px/704px). So regardless if a game is 320px wide or 352px wide, the PAR will still be the same.
-
 ## <span style="text-decoration:underline;">320px Games</span>
 
 **Resolution (NTSC):** 320x224  
 **Storage Aspect Ratio (SAR):** 10:7  
-**Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 320 * (6/7) = <span style="text-decoration:underline;">274x224 (137:112)</span>  
+**Pixel Aspect Ratio (PAR):** 307:336  
+**4:3-adjusted DAR (NTSC):** 320 * (307/336) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
 
 **Resolution (NTSC):** 320x240  
 **Storage Aspect Ratio (SAR):** 4:3  
-**Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 320 * (6/7) = <span style="text-decoration:underline;">274x240 (137:120)</span>  
+**Pixel Aspect Ratio (PAR):** 307:336  
+**4:3-adjusted DAR (NTSC):** 320 * (307/336) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
 
 ## <span style="text-decoration:underline;">352px Games</span>
 
@@ -167,33 +165,25 @@ The Saturn works differently from the PS1, in that it has the same dot clock rat
 **4:3-adjusted DAR (NTSC):** 352 * (6/7) = <span style="text-decoration:underline;">302x224 (151:112)</span>  
 
 **Resolution (NTSC):** 352x240  
-**Storage Aspect Ratio (SAR):** 22:15 (NTSC), 11:8 (PAL)  
+**Storage Aspect Ratio (SAR):** 22:15  
 **Pixel Aspect Ratio (PAR):** 6:7  
 **4:3-adjusted DAR (NTSC):** 352 * (6/7) = <span style="text-decoration:underline;">302x240 (151:120)</span>  
 
 ## <span style="text-decoration:underline;">640px Games</span>
 
 ### Progressive
-**Resolution (NTSC):** 640x224  
-**Storage Aspect Ratio (SAR):** 20:7  
-**Pixel Aspect Ratio (PAR):** 3:7  
-**4:3-adjusted DAR (NTSC):** 640 * (3/7) = <span style="text-decoration:underline;">274x224 (137:112)</span>  
-
-**Resolution (NTSC):** 640x240  
-**Storage Aspect Ratio (SAR):** 8:3  
-**Pixel Aspect Ratio (PAR):** 3:7  
-**4:3-adjusted DAR (NTSC):** 640 * (3/7) = <span style="text-decoration:underline;">274x240 (137:120)</span>  
+(More informmation needed: dot clock rate @ 640x224/240) 
 
 ### Interlaced
 **Resolution (NTSC):** 640x448i  
-**Storage Aspect Ratio (SAR):** 10:7 (NTSC)  
-**Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 640 * (6/7) = <span style="text-decoration:underline;">548x448 (137:112)</span>  
+**Storage Aspect Ratio (SAR):** 10:7 
+**Pixel Aspect Ratio (PAR):** 307:336  
+**4:3-adjusted DAR (NTSC):** 640 * (307/336) = <span style="text-decoration:underline;">584x448 (73:56)</span>  
 
 **Resolution (NTSC):** 640x480i  
 **Storage Aspect Ratio (SAR):** 4:3  
-**Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 640 * (6/7) = <span style="text-decoration:underline;">548x480 (137:120)</span>  
+**Pixel Aspect Ratio (PAR):** 307:336  
+**4:3-adjusted DAR (NTSC):** 640 * (6/7) = <span style="text-decoration:underline;">548x480 (73:60)</span>  
 
 ## <span style="text-decoration:underline;">704px Games</span>
 
@@ -306,6 +296,9 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 ### Pin Eight
 [NTSC Dot Clock Rates](https://pineight.com/mw/page/Dot_clock_rates.xhtml)  
 [PAL 50Hz Dot Clock Rates](https://pineight.com/mw/page/50_Hz_dot_clock_rates.xhtml)  
+
+### JunkerHQ
+[OSSC Optimal Timings](https://junkerhq.net/xrgb/index.php/Optimal_timings)  
 
 ### NESdev Wiki
 [NTSC Video](https://www.nesdev.org/wiki/NTSC_video)  
