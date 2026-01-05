@@ -176,7 +176,7 @@ Now we get to the console generation with games that run in various different re
 
 ### Interlaced
 **Resolution (NTSC):** 640x448i  
-**Storage Aspect Ratio (SAR):** 10:7 
+**Storage Aspect Ratio (SAR):** 10:7  
 **Pixel Aspect Ratio (PAR):** 307:336  
 **4:3-adjusted DAR (NTSC):** 640 * (307/336) = <span style="text-decoration:underline;">584x448 (73:56)</span>  
 
