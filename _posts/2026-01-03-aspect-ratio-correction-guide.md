@@ -272,7 +272,7 @@ Starting with the PS2 era, game consoles started following the Rec. 601 standard
 **Pixel Aspect Ratio (PAR):** 10:11  
 **4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x448 (291:224)</span>
 
-**Resolution (NTSC): **640x480  
+**Resolution (NTSC):** 640x480  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 10:11  
 **4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x480 (97:80)</span>
