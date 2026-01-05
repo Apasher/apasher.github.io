@@ -17,11 +17,12 @@ layout: default
   <div class="share-links no-print">
     {% include sharelinks.html %}
   </div>
-  <div class="table-of-contents">
-    {% include toc.html %}
-  </div>
+
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
+    <div class="table-of-contents">
+      {% include toc.html html=content %}
+    </div>
     <!-- <div class="no-print">
       {% include navlinks.html %}
     </div> -->
