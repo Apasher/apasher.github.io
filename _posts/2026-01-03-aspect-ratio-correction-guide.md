@@ -172,7 +172,7 @@ Now we get to the console generation with games that run in various different re
 ## <span style="text-decoration:underline;">640px Games</span>
 
 ### Progressive
-(More informmation needed: dot clock rate @ 640x224/240) 
+(More information needed: dot clock rate @ 640x224/240) 
 
 ### Interlaced
 **Resolution (NTSC):** 640x448i  
