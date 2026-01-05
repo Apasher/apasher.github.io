@@ -8,7 +8,7 @@ categories: retro-gaming game-capture
 tags: Game-Capture
 ---
 
-#Introduction and Explanation
+# Introduction and Explanation
 
 Before we begin, I want to preface that there are three different types of aspect ratio, and it is important to know the difference between all three in order to understand how to do proper aspect ratio correction.
 
