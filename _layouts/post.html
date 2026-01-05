@@ -19,10 +19,10 @@ layout: default
   </div>
 
   <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
     <div class="table-of-contents">
       {% include toc.html html=content %}
     </div>
+    {{ content }}
     <!-- <div class="no-print">
       {% include navlinks.html %}
     </div> -->
