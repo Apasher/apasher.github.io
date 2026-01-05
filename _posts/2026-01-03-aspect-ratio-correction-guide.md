@@ -298,42 +298,42 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 **4:3-adjusted DAR (NTSC):** 704 * (10/11) = <span style="text-decoration:underline;">640x480 (4:3)</span>  
 
 # References
-## FirebrandX
+### FirebrandX
 [The FirebrandX Story for Pixel Perfection](http://www.firebrandx.com/pixelpurist.html)  
 [Classic Console Aspect Correction](http://www.firebrandx.com/consoleaspectcorrection.html)  
 [Finding Proper 4:3 Correction for Vintage Video Games](https://www.youtube.com/watch?v=2owtAwcysQI)  
 
-## Pin Eight
+### Pin Eight
 [NTSC Dot Clock Rates](https://pineight.com/mw/page/Dot_clock_rates.xhtml)  
 [PAL 50Hz Dot Clock Rates](https://pineight.com/mw/page/50_Hz_dot_clock_rates.xhtml)  
 
-## NESdev Wiki
+### NESdev Wiki
 [NTSC Video](https://www.nesdev.org/wiki/NTSC_video)  
 [PAL Video](https://www.nesdev.org/wiki/PAL_video)  
 [Overscan](https://www.nesdev.org/wiki/Overscan)  
 
-## Sega Retro
+### Sega Retro
 [Sega Master System Technical Specifications](https://segaretro.org/Sega_Master_System/Technical_specifications#Graphics)  
 [Sega Mega Drive Technical Specifications](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Graphics)  
 [Sega Saturn Technical Specifications](https://segaretro.org/Sega_Saturn/Technical_specifications#Graphics)  
 
-## GC-Forever Wiki
+### GC-Forever Wiki
 [Swiss/Forced Progressive Compatibility List](https://www.gc-forever.com/wiki/index.php?title=Swiss/Forced_Progressive_Compatibility_List)  
 
-## RetroRGB
+### RetroRGB
 [Scaling Retro Gaming Captures with Virtualdub](https://retrorgb.com/virtualdub.html)  
 
-## R3 RGB Retro Resources
+### R3 RGB Retro Resources
 [Wiki](http://r3.fyi/)
 
-## Displaced Gamers
+### Displaced Gamers
 [Super Nintendo Aspect Ratio](https://www.youtube.com/watch?v=ssluTgfkdlg)  
 [Capcom Arcade Aspect Ratio (CPS1 and CPS2)](https://www.youtube.com/watch?v=LHfPA4n0TRo)  
 
-## Lurkertech
+### Lurkertech
 [Programmer's Guide to Video Systems](https://lurkertech.com/lg/video-systems/)  
 
-## Wikipedia
+### Wikipedia
 [Aspect Ratio (image)](https://en.wikipedia.org/wiki/Aspect_ratio_(image))  
 [Pixel Aspect Ratio](https://en.wikipedia.org/wiki/Pixel_aspect_ratio)  
 [Display Aspect Ratio](https://en.wikipedia.org/wiki/Display_aspect_ratio)  
