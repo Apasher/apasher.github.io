@@ -289,7 +289,7 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 **4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x448 (291:224)</span>  
 
 **Resolution (NTSC):** 640x450  
-**Storage Aspect Ratio (SAR):** 64:45 
+**Storage Aspect Ratio (SAR):** 64:45  
 **Pixel Aspect Ratio (PAR):** 10:11  
 **4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x450 (97:75)</span>  
 
