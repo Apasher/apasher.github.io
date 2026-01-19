@@ -283,6 +283,11 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 
 ## <span style="text-decoration:underline;">640px Games (Most Common)</span>
 
+**Resolution (NTSC):** 640x240  
+**Storage Aspect Ratio (SAR):** 8:3  
+**Pixel Aspect Ratio (PAR):** 5:11  
+**4:3-adjusted DAR (NTSC):** 640 * (5/11) = <span style="text-decoration:underline;">290x240 (29:24)</span>
+
 **Resolution (NTSC):** 640x448  
 **Storage Aspect Ratio (SAR):** 10:7  
 **Pixel Aspect Ratio (PAR):** 10:11  
@@ -314,6 +319,11 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 **4:3-adjusted DAR (NTSC):** 656 * (10/11) = <span style="text-decoration:underline;">596x448 (149:112)</span>  
 
 ## <span style="text-decoration:underline;">660px Games (Ex. Super Mario Sunshine, Animal Crossing, Wind Waker)</span>
+
+**Resolution (NTSC):** 660x232  
+**Storage Aspect Ratio (SAR):** 165:58  
+**Pixel Aspect Ratio (PAR):**  5:11  
+**4:3-adjusted DAR (NTSC):** 660 * (5/11) = <span style="text-decoration:underline;">300x232 (75:58)</span>
 
 **Resolution (NTSC):** 660x448  
 **Storage Aspect Ratio (SAR):** 165:112  
