@@ -62,10 +62,19 @@ Disclaimer: This guide will mainly be focused on NTSC, but I will update this pa
 
 # PC-Engine/TurboGrafx-16
 
+## <span style="text-decoration:underline;">256px Games</span>
+
 **Resolution (NTSC):** 256x240  
 **Storage Aspect Ratio (SAR):** 16:15  
 **Pixel Aspect Ratio (PAR):** 8:7  
 **4:3-adjusted DAR (NTSC):** 256 * (8/7) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+
+## <span style="text-decoration:underline;">352px Games</span>
+
+**Resolution (NTSC):** 352x240  
+**Storage Aspect Ratio (SAR):** 22:15  
+**Pixel Aspect Ratio (PAR):** 6:7  
+**4:3-adjusted DAR (NTSC):** 352 * (6/7) = <span style="text-decoration:underline;">302x240 (151:120)</span>  
 
 # Sega Genesis
 
