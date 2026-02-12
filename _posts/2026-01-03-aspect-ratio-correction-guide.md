@@ -30,7 +30,7 @@ So what if you want your game capture to accurately represent what you see on a 
 
 This will give you an accurate representation of the aspect ratio you will see on a *perfectly calibrated* CRT TV. Do keep in mind that CRT displays are old imperfect analog displays and likely haven’t been calibrated in 20 years, so what you may see on your CRT may not represent what you will see on a *perfectly calibrated* CRT.
 
-The final values given may result in a horizontal resolution that is not a whole number depending on how you upscale your game capture. You generally want to avoid odd/uneven pixels to assure pixel uniformity so it is best practice to round to the nearest even pixel, but the value you round to could result in a final DAR that may differ depending on your scale factor. Aspect ratios are never 100% perfect, CRTs are not perfect displays, and there will always be “close enoughs” when it comes to aspect ratios from the analog era.
+The final values given may result in a horizontal resolution that is not a whole number depending on how you upscale your game capture. You generally want to avoid uneven pixels to assure pixel uniformity so it is best practice to round to the nearest even pixel, but the value you round to could result in a final DAR that may differ depending on your scale factor. Aspect ratios are never 100% perfect, CRTs are not perfect displays, and there will always be “close enoughs” when it comes to aspect ratios from the analog era.
 
 # NES/SNES
 
