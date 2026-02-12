@@ -8,6 +8,8 @@ categories: retro-gaming game-capture
 tags: Game-Capture
 ---
 
+<span style="text-decoration:underline;">UPDATE 2026/02/12:</span> I have updated the math and final aspect ratio values to be more accurate. The previous misleading numbers were given under the assumption that you always need to round to the nearest even pixel, but this is something you should only do on the final possible output. The values I previously gave were rounded values assuming a 1x scale factor, but the more you increase the scale factor, the bigger the discrepancy between the accurate aspect ratio and the rounded aspect ratio from 1x. In short, the aspect ratio should be corrected on the final possible output to ensure maximum fidelity. Apologies for the inaccurate information.
+
 # Introduction and Explanation
 
 Before we begin, I want to preface that there are three different types of aspect ratio, and it is important to know the difference between all three in order to understand how to do proper aspect ratio correction.
@@ -24,7 +26,11 @@ There are two different camps that people often take when it comes to aspect rat
 
 So what if you want your game capture to accurately represent what you see on a CRT TV? Well you just stretch it to 4:3 and call it a day, right? After all, that’s what actual CRT TVs do. They interpolate the image to 4:3, so that’s what I should do right? Well, that’s something that most people get wrong. Most people like to crop out the black borders surrounding the image, and then stretch the active game graphics to 4:3. While it is a convenient way to correct aspect ratio, it’s actually not accurate to what you see on a CRT. **It’s not just the active game graphics that get interpolated to 4:3 on a CRT TV. It’s the active game graphics <span style="text-decoration:underline;">plus</span> overscan padding.** So how do you get the correct CRT-accurate aspect ratio in your game capture? Simple, [FirebrandX](https://www.firebrandx.com/) came up with an easy formula that involves taking the horizontal resolution of a game, and multiplying it by the console’s PAR. Alternatively; you can multiply the vertical resolution by the PAR's reciprocal so you can overscan into a standard 4:3 frame, and for consoles that follow the Rec. 601 standard (ie. the GameCube and Wii,) you don’t have to do any calculation whatsoever. You can just capture the 720x480 frame, crop the center to 704x480, and scale it to 4:3. Ste from [HD Retrovision](https://www.hdretrovision.com/) has a [more complex formula](https://cdn.retrorgb.com/wp-content/uploads/2019/02/horiz_correction_factor.png), but for this guide we will be sticking with the FirebrandX formula. Do keep in mind that just like presenting games in square pixels, whether the in-game geometry will look correct or not will completely depend on the game. There are cases where if a game’s SAR is 4:3, that it’s actually desirable to retain its 4:3 aspect ratio, even if it’s not what you see on a CRT. From here on out, I will be giving details for each console on how to correct the aspect ratio for their perspective games. 
 
-Disclaimer: This guide will mainly be focused on NTSC, but I will update this page with complete information for PAL in the future.
+**Disclaimers:** This guide will mainly be focused on NTSC, but I will update this page with complete information for PAL in the future.
+
+This will give you an accurate representation of the aspect ratio you will see on a *perfectly calibrated *CRT TV. Do keep in mind that CRT displays are old imperfect analog displays and likely haven’t been calibrated in 20 years, so what you may see on your CRT may not represent what you will see on a *perfectly calibrated* CRT.
+
+The final values given may result in a horizontal resolution that is not a whole number depending on how you upscale your game capture. You generally want to avoid odd/uneven pixels to assure pixel uniformity so it is best practice to round to the nearest even pixel, but the value you round to could result in a final DAR that may differ depending on your scale factor. Aspect ratios are never 100% perfect, CRTs are not perfect displays, and there will always be “close enoughs” when it comes to aspect ratios from the analog era.
 
 # NES/SNES
 
@@ -33,32 +39,32 @@ Disclaimer: This guide will mainly be focused on NTSC, but I will update this pa
 **Resolution (NTSC):** 256x224  
 **Storage Aspect Ratio (SAR):** 8:7  
 **Pixel Aspect Ratio (PAR):** 8:7  
-**4:3-adjusted DAR:** 256 * (8/7) = <span style="text-decoration:underline;">292x224 (73:56)</span>
+**4:3-adjusted DAR:** 256 * (8/7) / 224 = <span style="text-decoration:underline;">64:49</span>
 
 
 **Resolution (NTSC):** 256x240  
 **Storage Aspect Ratio (SAR):** 16:15  
 **Pixel Aspect Ratio (PAR):** 8:7  
-**4:3-adjusted DAR (NTSC):** 256 * (8/7) = <u>292x240 (73:60)</u>  
+**4:3-adjusted DAR (NTSC):** 256 * (8/7) / 240 = <span style="text-decoration:underline;">128:105</span> 
 
 ## <span style="text-decoration:underline;">512px Games</span>
 
 **Resolution (NTSC):** 512x224  
 **Storage Aspect Ratio (SAR):** 16:7  
 **Pixel Aspect Ratio (PAR):** 4:7  
-**4:3-adjusted DAR:** 512 * (4/7) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
+**4:3-adjusted DAR:** 512 * (4/7) / 224 = <span style="text-decoration:underline;">64:49</span>  
 
 **Resolution (NTSC):** 512x240  
 **Storage Aspect Ratio (SAR):** 32:15  
 **Pixel Aspect Ratio (PAR):** 4:7  
-**4:3-adjusted DAR:** 512 * (4/7) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR:** 512 * (4/7) / 240 = <span style="text-decoration:underline;">128:105</span>  
 
 # Sega Master System
 
 **Resolution (NTSC):** 256x192  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 8:7  
-**4:3-adjusted DAR:** 256 * (8/7) = <span style="text-decoration:underline;">292x192 (73:48)</span>  
+**4:3-adjusted DAR:** 256 * (8/7) / 192 = <span style="text-decoration:underline;">32:21</span>  
 
 # PC-Engine/TurboGrafx-16
 
@@ -67,14 +73,14 @@ Disclaimer: This guide will mainly be focused on NTSC, but I will update this pa
 **Resolution (NTSC):** 256x240  
 **Storage Aspect Ratio (SAR):** 16:15  
 **Pixel Aspect Ratio (PAR):** 8:7  
-**4:3-adjusted DAR (NTSC):** 256 * (8/7) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 256 * (8/7) / 240 = <span style="text-decoration:underline;">128:105</span> 
 
 ## <span style="text-decoration:underline;">352px Games</span>
 
 **Resolution (NTSC):** 352x240  
 **Storage Aspect Ratio (SAR):** 22:15  
 **Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 352 * (6/7) = <span style="text-decoration:underline;">302x240 (151:120)</span>  
+**4:3-adjusted DAR (NTSC):** 352 * (6/7) / 240 = <span style="text-decoration:underline;">44:35</span>  
 
 # Sega Genesis
 
@@ -83,21 +89,21 @@ Disclaimer: This guide will mainly be focused on NTSC, but I will update this pa
 **Resolution (NTSC):** 256x224  
 **Storage Aspect Ratio (SAR):** 8:7  
 **Pixel Aspect Ratio (PAR):** 8:7  
-**4:3-adjusted DAR (NTSC):** 256 * (8/7) = <span style="text-decoration:underline;">292x224 (73:56) </span>  
+**4:3-adjusted DAR (NTSC):** 256 * (8/7) / 224 = <span style="text-decoration:underline;">64:49</span>  
 
 ## <span style="text-decoration:underline;">320px Games</span>
 
 **Resolution (NTSC):** 320x224  
 **Storage Aspect Ratio (SAR):** 10:7  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 320 * (32/35) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
+**4:3-adjusted DAR (NTSC):** 320 * (32/35) / 224 = <span style="text-decoration:underline;">64:49</span> 
 
 # Neo Geo AES
 
 **Resolution (NTSC):** 320x240  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 65:64  
-**4:3-adjusted DAR (NTSC):** 320 * (65/64) = <span style="text-decoration:underline;">325x240 (65:48)</span>  
+**4:3-adjusted DAR (NTSC):** 320 * (65/64) / 240 = <span style="text-decoration:underline;">65:48</span> 
 
 # PlayStation 1
 
@@ -108,21 +114,21 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 256x240  
 **Storage Aspect Ratio (SAR):** 16:15  
 **Pixel Aspect Ratio (PAR):** 8:7  
-**4:3-adjusted DAR (NTSC):** 256 * (8/7) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 256 * (8/7) / 240 = <span style="text-decoration:underline;">128:105</span> 
 
 ## <span style="text-decoration:underline;">320px Games</span>
 
 **Resolution (NTSC):** 320x240  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 320 * (32/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 320 * (32/35) / 240 = <span style="text-decoration:underline;">128:105</span> 
 
 ## <span style="text-decoration:underline;">384px Games</span>
 
 **Resolution (NTSC):** 384x240  
 **Storage Aspect Ratio (SAR):** 16:10  
 **Pixel Aspect Ratio (PAR):** 4:5  
-**4:3-adjusted DAR (NTSC):** 384 * (4/5) = <span style="text-decoration:underline;">308x240 (77:60)</span>  
+**4:3-adjusted DAR (NTSC):** 384 * (4/5) / 240 = <span style="text-decoration:underline;">32:25</span>  
 
 ## <span style="text-decoration:underline;">512px Games</span>
 
@@ -130,13 +136,13 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 512x240  
 **Storage Aspect Ratio (SAR):** 32:15  
 **Pixel Aspect Ratio (PAR):** 4:7  
-**4:3-adjusted DAR (NTSC):** 512 * (4/7) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 512 * (4/7) / 240 = <span style="text-decoration:underline;">128:105</span>
 
 ### Interlaced
 **Resolution (NTSC):** 512x480i  
 **Storage Aspect Ratio (SAR):** 16:15  
 **Pixel Aspect Ratio (PAR):** 8:7  
-**4:3-adjusted DAR (NTSC):** 512 * (8/7) = <span style="text-decoration:underline;">584x480i (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 512 * (8/7) / 480 = <span style="text-decoration:underline;">128:105</span> 
 
 ## <span style="text-decoration:underline;">640px Games</span>
 
@@ -144,13 +150,13 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 640x240  
 **Storage Aspect Ratio (SAR):** 8:3  
 **Pixel Aspect Ratio (PAR):** 16:35  
-**4:3-adjusted DAR (NTSC):** 640 * (16/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (16/35) = / 240 = <span style="text-decoration:underline;">128:105</span> 
 
 ### Interlaced
 **Resolution (NTSC):** 640x480i  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 640 * (32/35) = <span style="text-decoration:underline;">584x480i (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (32/35) / 480 = <span style="text-decoration:underline;">128:105</span>  
 
 # Sega Saturn
 
@@ -159,24 +165,24 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 320x224  
 **Storage Aspect Ratio (SAR):** 10:7  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 320 * (32/35) = <span style="text-decoration:underline;">292x224 (73:56)</span>  
+**4:3-adjusted DAR (NTSC):** 320 * (32/35) / 224 = <span style="text-decoration:underline;">64:49</span>  
 
 **Resolution (NTSC):** 320x240  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 320 * (32/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 320 * (32/35) / 240 = <span style="text-decoration:underline;">128:105</span>  
 
 ## <span style="text-decoration:underline;">352px Games</span>
 
 **Resolution (NTSC):** 352x224  
 **Storage Aspect Ratio (SAR):** 11:7   
 **Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 352 * (6/7) = <span style="text-decoration:underline;">302x224 (151:112)</span>  
+**4:3-adjusted DAR (NTSC):** 352 * (6/7) / 224 = <span style="text-decoration:underline;">66:49</span>  
 
 **Resolution (NTSC):** 352x240  
 **Storage Aspect Ratio (SAR):** 22:15  
 **Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 352 * (6/7) = <span style="text-decoration:underline;">302x240 (151:120)</span>  
+**4:3-adjusted DAR (NTSC):** 352 * (6/7) / 240 = <span style="text-decoration:underline;">44:35</span>  
 
 ## <span style="text-decoration:underline;">640px Games</span>
 
@@ -184,23 +190,23 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 640x224  
 **Storage Aspect Ratio (SAR):** 20:7  
 **Pixel Aspect Ratio (PAR):** 16:35  
-**4:3-adjusted DAR (NTSC):** 640 * (16/35) = <span style="text-decoration:underline;">292x224(73:56)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (16/35) / 224 = <span style="text-decoration:underline;">64:49</span>  
 
 **Resolution (NTSC):** 640x240  
 **Storage Aspect Ratio (SAR):** 8:3  
 **Pixel Aspect Ratio (PAR):** 16:35  
-**4:3-adjusted DAR (NTSC):** 640 * (16/35) = <span style="text-decoration:underline;">292x240 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (16/35) / 224 = <span style="text-decoration:underline;">128:105</span>  
 
 ### Interlaced
 **Resolution (NTSC):** 640x448i  
 **Storage Aspect Ratio (SAR):** 10:7  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 640 * (32/35) = <span style="text-decoration:underline;">584x448 (73:56)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (32/35) / 448 = <span style="text-decoration:underline;">64:49</span>  
 
 **Resolution (NTSC):** 640x480i  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 32:35  
-**4:3-adjusted DAR (NTSC):** 640 * (32/35) = <span style="text-decoration:underline;">584x480 (73:60)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (32/35) / 480 = <span style="text-decoration:underline;">128:105</span>  
 
 ## <span style="text-decoration:underline;">704px Games</span>
 
@@ -208,23 +214,23 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 704x224  
 **Storage Aspect Ratio (SAR):** 22:7  
 **Pixel Aspect Ratio (PAR):** 3:7  
-**4:3-adjusted DAR (NTSC):** 704 * (3/7) = <span style="text-decoration:underline;">302x224 (151:112)</span>  
+**4:3-adjusted DAR (NTSC):** 704 * (3/7) / 224 = <span style="text-decoration:underline;">66:49</span> 
 
 **Resolution (NTSC):** 704x240  
 **Storage Aspect Ratio (SAR):** 44:15  
 **Pixel Aspect Ratio (PAR):** 3:7  
-**4:3-adjusted DAR (NTSC):** 704 * (3/7) = <span style="text-decoration:underline;">302x240 (151:120)</span>  
+**4:3-adjusted DAR (NTSC):** 704 * (3/7) / 240 = <span style="text-decoration:underline;">44:35</span>  
 
 ### Interlaced  
 **Resolution (NTSC):** 704x448i  
 **Storage Aspect Ratio (SAR):** 11:7  
 **Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 704 * (6/7) = <span style="text-decoration:underline;">604x448 (151:112)</span>  
+**4:3-adjusted DAR (NTSC):** 704 * (6/7) / 448 = <span style="text-decoration:underline;">66:49</span>  
 
 **Resolution (NTSC):** 704x480i  
 **Storage Aspect Ratio (SAR):** 22:15  
 **Pixel Aspect Ratio (PAR):** 6:7  
-**4:3-adjusted DAR (NTSC):** 704 * (6/7) = <span style="text-decoration:underline;">604x480 (151:120)</span>  
+**4:3-adjusted DAR (NTSC):** 704 * (6/7) / 480 = <span style="text-decoration:underline;">44:35</span> 
 
 # Nintendo 64
 
@@ -233,7 +239,7 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 320x240  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 120:119  
-**4:3-adjusted DAR (NTSC):** 320 * (120/119) = <span style="text-decoration:underline;">322x240 (161:120)</span>  
+**4:3-adjusted DAR (NTSC):** 320 * (120/119) / 240 = <span style="text-decoration:underline;">160:119</span>  
 
 ## <span style="text-decoration:underline;">640px Games</span>
 
@@ -241,50 +247,65 @@ Now we get to the console generation with games that run in various different re
 **Resolution (NTSC):** 640x240  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 60:119  
-**4:3-adjusted DAR (NTSC):** 640 * (60/119) = <span style="text-decoration:underline;">322x240 (161:120)</span>
+**4:3-adjusted DAR (NTSC):** 640 * (60/119) / 240 = <span style="text-decoration:underline;">160:119</span>
 
 ### Interlaced
 **Resolution (NTSC):** 640x480i  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 120:119  
-**4:3-adjusted DAR (NTSC):** 640 * (120/119) = <span style="text-decoration:underline;">644x480i (161:120)</span>
+**4:3-adjusted DAR (NTSC):** 640 * (120/119) / 480 = <span style="text-decoration:underline;">160:119</span>
 
 # PlayStation 2
-Starting with the PS2 era, game consoles started following the Rec. 601 standard for their video output, meaning a 13.5 MHz dot clock frequency with a PAR of 10:11. For the PS2, this is mainly true for 640px games. However for 512px games, the PS2 outputs a dot clock frequency of 10.8 MHz, giving a PAR of 25:22. This console generation gives a strong case that the games from this era are not meant to be viewed with square pixels, as the pixels aren't square in the first place. Luckily for PS2 games, the final outputting DAR is relatively consistent, unlike certain Nintendo consoles that we will get to later.
+Starting with the PS2 era, game consoles started following the Rec. 601 standard for their video output, meaning a 13.5 MHz dot clock frequency with a PAR of 10:11. For the PS2, this is mainly true for 640px games. However for 512px games, the PS2 outputs a dot clock frequency of 10.8 MHz, giving a PAR of 25:22. Also coming with this console generation are games that feature anamorphic 16:9 widescreen modes. Since these video modes are *anamorphic* widescreen and not true widescreen, the resolution and dot clock rates **do not change. **The only thing that changes is the geometry of the active graphics, being squished to fit a 4:3 video signal. During this era, users were expected to change the aspect ratio settings on their TVs in order to present the game in its correct geometry when anamorphic widescreen mode is enabled. When stretched to widescreen, games that follow the Rec. 601 standard in NTSC are presented with a PAR of 40:33. This is achieved by multiplying 10:11 by 4:3. So when finding the PAR of anamorphic widescreen games of 512px games, multiplying 25:22 by 4:3 will give you a widescreen PAR of 50:33. In short, the math for finding the PAR of games when stretched to widescreen is wPAR = sPAR * sDAR.
 
 ## <span style="text-decoration:underline;">512px Games</span>
 
-**Resolution (NTSC):** 512x320i  
-**Storage Aspect Ratio (SAR):** 16:10  
-**Pixel Aspect Ratio (PAR):** 25:22  
-**4:3-adjusted DAR (NTSC):** 512 * (25/22) = <span style="text-decoration:underline;">582x320i (291:160)</span>
-
-**Resolution (NTSC):** 512x448i  
+### Standard 4:3  
+**Resolution (NTSC):** 512x448  
 **Storage Aspect Ratio (SAR):** 8:7  
 **Pixel Aspect Ratio (PAR):** 25:22  
-**4:3-adjusted DAR (NTSC):** 512 * (25/22) = <span style="text-decoration:underline;">582x448i (291:224)</span>
+**4:3-adjusted DAR (NTSC):** 512 * (25/22) / 448 = <span style="text-decoration:underline;">100:77</span>
 
-**Resolution (NTSC):** 512x480i  
+**Resolution (NTSC):** 512x480  
 **Storage Aspect Ratio (SAR):** 16:15  
 **Pixel Aspect Ratio (PAR):** 25:22  
-**4:3-adjusted DAR (NTSC):** 512 * (25/22) = <span style="text-decoration:underline;">582x480i (97:80)</span>
+**4:3-adjusted DAR (NTSC):** 512 * (25/22) / 480 = <span style="text-decoration:underline;">40:33</span>
+
+### Anamorphic Widescreen
+
+**Resolution (NTSC):** 512x448  
+**Storage Aspect Ratio (SAR):** 8:7  
+**Pixel Aspect Ratio (PAR):** 50:33  
+**16:9-adjusted DAR (NTSC):** 512 * (50/33) / 448 = <span style="text-decoration:underline;">400:231</span>
+
+**Resolution (NTSC):** 512x480  
+**Storage Aspect Ratio (SAR):** 16:15  
+**Pixel Aspect Ratio (PAR):** 50:33  
+**16:9-adjusted DAR (NTSC):** 512 * (50/33) / 480 = <span style="text-decoration:underline;">160:99</span>
 
 ## <span style="text-decoration:underline;">640px Games</span>
 
-**Resolution (NTSC):** 640x400i  
-**Storage Aspect Ratio (SAR):** 16:10  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x400i (291:200)</span>
-
+### Standard 4:3  
 **Resolution (NTSC):** 640x448  
 **Storage Aspect Ratio (SAR):** 10:7  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x448 (291:224)</span>
+**4:3-adjusted DAR (NTSC):** 640 * (10/11) / 448 = <span style="text-decoration:underline;">100:77</span>
 
 **Resolution (NTSC):** 640x480  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x480 (97:80)</span>
+**4:3-adjusted DAR (NTSC):** 640 * (10/11) / 480 = <span style="text-decoration:underline;">40:33</span>
+
+### Anamorphic Widescreen  
+**Resolution (NTSC):** 640x448  
+**Storage Aspect Ratio (SAR):** 10:7  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 640 * (40/33) / 448 = <span style="text-decoration:underline;">400:231</span>
+
+**Resolution (NTSC):** 640x480  
+**Storage Aspect Ratio (SAR):** 4:3  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 640 * (40/33) / 480 = <span style="text-decoration:underline;">160:99</span>
 
 # GameCube/Wii
 
@@ -292,25 +313,37 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 
 ## <span style="text-decoration:underline;">640px Games (Most Common)</span>
 
+### Standard 4:3  
 **Resolution (NTSC):** 640x240  
 **Storage Aspect Ratio (SAR):** 8:3  
 **Pixel Aspect Ratio (PAR):** 5:11  
-**4:3-adjusted DAR (NTSC):** 640 * (5/11) = <span style="text-decoration:underline;">290x240 (29:24)</span>
+**4:3-adjusted DAR (NTSC):** 640 * (5/11) / 240 = <span style="text-decoration:underline;">40:33</span>
 
 **Resolution (NTSC):** 640x448  
 **Storage Aspect Ratio (SAR):** 10:7  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x448 (291:224)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (10/11) / 448 = <span style="text-decoration:underline;">100:77</span> 
 
 **Resolution (NTSC):** 640x450  
 **Storage Aspect Ratio (SAR):** 64:45  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x450 (97:75)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (10/11) / 450 = <span style="text-decoration:underline;">128:99</span>  
 
 **Resolution (NTSC):** 640x480  
 **Storage Aspect Ratio (SAR):** 4:3  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) = <span style="text-decoration:underline;">582x480 (97:80)</span>  
+**4:3-adjusted DAR (NTSC):** 640 * (10/11) / 480 = <span style="text-decoration:underline;">40:33</span>
+
+### Anamorphic Widescreen
+**Resolution (NTSC):** 640x448  
+**Storage Aspect Ratio (SAR):** 10:7  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 640 * (40/33) / 448 = <span style="text-decoration:underline;">400:231</span>
+
+**Resolution (NTSC):** 640x480  
+**Storage Aspect Ratio (SAR):** 4:3  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 640 * (40/33) / 480 = <span style="text-decoration:underline;">160:99</span>
 
 
 ## <span style="text-decoration:underline;">650px Games (Ex. Tony Hawk’s Pro Skater 4)</span>
@@ -318,50 +351,103 @@ Now this is where things get complicated. Both the GameCube and the Wii have gam
 **Resolution (NTSC):** 650x448  
 **Storage Aspect Ratio (SAR):** 325:224  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 650 * (10/11) = <span style="text-decoration:underline;">590x448 (295:224)</span>   
+**4:3-adjusted DAR (NTSC):** 650 * (10/11) / 448 = <span style="text-decoration:underline;">1625:1232</span>   
 
 ## <span style="text-decoration:underline;">656px Games (Ex. Prince of Persia: The Two Thrones)</span>
 
 **Resolution (NTSC):** 656x448  
 **Storage Aspect Ratio (SAR):** 41:28  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 656 * (10/11) = <span style="text-decoration:underline;">596x448 (149:112)</span>  
+**4:3-adjusted DAR (NTSC):** 656 * (10/11) / 448 = <span style="text-decoration:underline;">205:154</span> 
 
 ## <span style="text-decoration:underline;">660px Games (Ex. Super Mario Sunshine, Animal Crossing, Wind Waker)</span>
 
 **Resolution (NTSC):** 660x232  
 **Storage Aspect Ratio (SAR):** 165:58  
 **Pixel Aspect Ratio (PAR):**  5:11  
-**4:3-adjusted DAR (NTSC):** 660 * (5/11) = <span style="text-decoration:underline;">300x232 (75:58)</span>
+**4:3-adjusted DAR (NTSC):** 660 * (5/11) / 232 = <span style="text-decoration:underline;">75:58</span>
 
 **Resolution (NTSC):** 660x448  
 **Storage Aspect Ratio (SAR):** 165:112  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 660 * (10/11) = <span style="text-decoration:underline;">600x448 (75:56)</span>  
+**4:3-adjusted DAR (NTSC):** 660 * (10/11) / 448 = <span style="text-decoration:underline;">75:56</span>
 
 **Resolution (NTSC):** 660x464  
 **Storage Aspect Ratio (SAR):** 165:116  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 660 * (10/11) = <span style="text-decoration:underline;">600x464 (75:58)</span>  
+**4:3-adjusted DAR (NTSC):** 660 * (10/11) / 464 = <span style="text-decoration:underline;">75:58</span> 
 
 **Resolution (NTSC):** 660x480  
 **Storage Aspect Ratio (SAR):** 11:8  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 660 * (10/11) = <span style="text-decoration:underline;">600x480 (5:4)</span>  
+**4:3-adjusted DAR (NTSC):** 660 * (10/11) / 480 = <span style="text-decoration:underline;">5:4</span> 
 
 ## <span style="text-decoration:underline;">666px Games (Ex. Double Dash, Twilight Princess)</span>
 
 **Resolution (NTSC):** 666x448  
 **Storage Aspect Ratio (SAR):** 333:224  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 666 * (10/11) = <span style="text-decoration:underline;">606x448 (303:224)</span>  
+**4:3-adjusted DAR (NTSC):** 666 * (10/11) / 448 = <span style="text-decoration:underline;">1665:1232</span>
+
+## <span style="text-decoration:underline;">670px Games (Ex. Most Wii games in Standard 4:3)</span>
+
+### Standard 4:3  
+**Resolution (NTSC):** 670x448  
+**Storage Aspect Ratio (SAR):** 335:224  
+**Pixel Aspect Ratio (PAR):** 10:11  
+**4:3-adjusted DAR (NTSC):** 670 * (10/11) / 448 = <span style="text-decoration:underline;">1675:1232</span>
+
+**Resolution (NTSC):** 670x456  
+**Storage Aspect Ratio (SAR):** 335:228  
+**Pixel Aspect Ratio (PAR):** 10:11  
+**4:3-adjusted DAR (NTSC):** 670 * (10/11) / 456 = <span style="text-decoration:underline;">1675:1254</span>
+
+**Resolution (NTSC):** 670x480  
+**Storage Aspect Ratio (SAR):** 67:48  
+**Pixel Aspect Ratio (PAR):** 10:11  
+**4:3-adjusted DAR (NTSC):** 670 * (10/11) / 480 = <span style="text-decoration:underline;">335:264</span>
+
+### Anamorphic Widescreen  
+**Resolution (NTSC):** 670x456  
+**Storage Aspect Ratio (SAR):** 335:228  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 670 * (40/33) / 456 = <span style="text-decoration:underline;">3350:1881</span>
+
+**Resolution (NTSC):** 670x480  
+**Storage Aspect Ratio (SAR):** 67:48  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 670 * (40/33) / 480 = <span style="text-decoration:underline;">335:198</span>
+
+## <span style="text-decoration:underline;">672px Games (Ex. ToS: Dawn of a New World in Anamorphic Widescreen)</span>
+
+**Resolution (NTSC):** 672x448  
+**Storage Aspect Ratio (SAR):** 3:2  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 672 * (40/33) / 448 = <span style="text-decoration:underline;">20:11</span>
+
+## <span style="text-decoration:underline;">686px Games (Ex. Most Wii games in Anamorphic Widescreen)</span>
+
+**Resolution (NTSC):** 686x448  
+**Storage Aspect Ratio (SAR):** 49:32  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 686 * (40/33) / 480 = <span style="text-decoration:underline;">245:132</span>
+
+**Resolution (NTSC):** 686x456  
+**Storage Aspect Ratio (SAR):** 343:228  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 686 * (40/33) / 456 = <span style="text-decoration:underline;">3430:1881</span>
+
+**Resolution (NTSC):** 686x480  
+**Storage Aspect Ratio (SAR):** 343:240  
+**Pixel Aspect Ratio (PAR):** 40:33  
+**16:9-adjusted DAR (NTSC):** 686 * (40/33) / 448 = <span style="text-decoration:underline;">343:198</span>
 
 ## <span style="text-decoration:underline;">704px Games (Ex. Ocarina of Time/Master Quest, Majora’s Mask)</span>
 
 **Resolution (NTSC):** 704x480  
 **Storage Aspect Ratio (SAR):** 22:15  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 704 * (10/11) = <span style="text-decoration:underline;">640x480 (4:3)</span>  
+**4:3-adjusted DAR (NTSC):** 704 * (10/11) / 480 = <span style="text-decoration:underline;">4:3</span>  
 
 # References
 ### FirebrandX
