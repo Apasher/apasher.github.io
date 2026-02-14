@@ -328,7 +328,7 @@ It is also important to note that while many games output in different resolutio
 **Resolution (NTSC):** 720x480  
 **Storage Aspect Ratio (SAR):** 3:2  
 **Pixel Aspect Ratio (PAR):** 40:33  
-**4:3-adjusted DAR (NTSC):** 720 * (40:33) / 480 = <span style="text-decoration:underline;">20:11</span>
+**16:9-adjusted DAR (NTSC):** 720 * (40:33) / 480 = <span style="text-decoration:underline;">20:11</span>
 
 # References
 ### FirebrandX
