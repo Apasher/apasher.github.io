@@ -309,145 +309,24 @@ Starting with the PS2 era, game consoles started following the Rec. 601 standard
 
 # GameCube/Wii
 
-Now this is where things get complicated. Both the GameCube and the Wii have games that apply an arbitrary amount of horizontal scaling to their games, giving their library a wide variety of horizontal resolutions. For example, Twilight Princess internally renders in a resolution of 608x448, but its output resolution is 666x448. That’s a resolution with a SAR that is too wide, but remember that the output resolution does not define the aspect ratio that you see on a CRT, as it recognizes the signal as 666 *samples per-line*, not 666 pixels wide. It is also important to note that GameCube and Wii games do not have square pixels, as they follow the Rec. 601 standard and have a dot clock of 13.5 MHz, giving a PAR of 10:11. Echoing my sentiments from the PS2 section, this is a strong case where GameCube/Wii games aren’t meant to be viewed with square pixels, because the pixels aren’t square in the first place. So some form of aspect ratio correction has to be done when the video signal is digitized, especially with games that have horizontal scaling because digital displays and capture cards interpret the scaled resolution as “666 pixels wide” instead of 666 samples-per-line. TL;DR, **if the SAR of your game is not 4:3, ignore it. It does not define the aspect ratio.** Refer to [this list](https://www.gc-forever.com/wiki/index.php?title=Swiss/Forced_Progressive_Compatibility_List) to check your game’s resolution.
-
-## <span style="text-decoration:underline;">640px Games (Most Common)</span>
+Both the GameCube and the Wii have games that apply an arbitrary amount of horizontal scaling to their games, giving their library a wide variety of horizontal resolutions. For example, Twilight Princess internally renders in a resolution of 608x448, but its output resolution is 666x448. That’s a resolution with a SAR that is too wide, but remember that the output resolution does not define the aspect ratio that you see on a CRT, as it recognizes the signal as 666 *samples per-line*, not 666 pixels wide. It is also important to note that GameCube and Wii games do not have square pixels, as they follow the Rec. 601 standard and have a dot clock of 13.5 MHz, giving a PAR of 10:11. Echoing my sentiments from the PS2 section, this is a strong case where GameCube/Wii games aren’t meant to be viewed with square pixels, because the pixels aren’t square in the first place. So some form of aspect ratio correction has to be done when the video signal is digitized, especially with games that have horizontal scaling because digital displays and capture cards interpret the scaled resolution as “666 pixels wide” instead of 666 samples-per-line. TL;DR, **if the SAR of your game is not 4:3, ignore it. It does not define the aspect ratio.** It is important to note that while many games output in different resolutions and different aspect ratios, the *consle's* video output *remains the same.* Both the GameCube and Wii output a 720x480 video signal no matter what. The exceptions are when it's displaying a game in 240p mode. So the easiest way to DAR correct for GameCube/Wii is to scale the 720x480 frame to the appropriate aspect ratio listed below, then crop as needed. However, if you would like to know your game's specific aspect ratio, refer to [this list](https://www.gc-forever.com/wiki/index.php?title=Swiss/Forced_Progressive_Compatibility_List) to check your game’s resolution then apply the same formula.
 
 ### Standard 4:3  
-**Resolution (NTSC):** 640x240  
-**Storage Aspect Ratio (SAR):** 8:3  
+**Resolution (NTSC):** 720x240  
+**Storage Aspect Ratio (SAR):** 3:1  
 **Pixel Aspect Ratio (PAR):** 5:11  
-**4:3-adjusted DAR (NTSC):** 640 * (5/11) / 240 = <span style="text-decoration:underline;">40:33</span>
+**4:3-adjusted DAR (NTSC):** 720 * (5/11) / 240 = <span style="text-decoration:underline;">15:11</span>
 
-**Resolution (NTSC):** 640x448  
-**Storage Aspect Ratio (SAR):** 10:7  
+**Resolution (NTSC):** 720x480  
+**Storage Aspect Ratio (SAR):** 3:2  
 **Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) / 448 = <span style="text-decoration:underline;">100:77</span> 
-
-**Resolution (NTSC):** 640x450  
-**Storage Aspect Ratio (SAR):** 64:45  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) / 450 = <span style="text-decoration:underline;">128:99</span>  
-
-**Resolution (NTSC):** 640x480  
-**Storage Aspect Ratio (SAR):** 4:3  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 640 * (10/11) / 480 = <span style="text-decoration:underline;">40:33</span>
-
-### Anamorphic Widescreen
-**Resolution (NTSC):** 640x448  
-**Storage Aspect Ratio (SAR):** 10:7  
-**Pixel Aspect Ratio (PAR):** 40:33  
-**16:9-adjusted DAR (NTSC):** 640 * (40/33) / 448 = <span style="text-decoration:underline;">400:231</span>
-
-**Resolution (NTSC):** 640x480  
-**Storage Aspect Ratio (SAR):** 4:3  
-**Pixel Aspect Ratio (PAR):** 40:33  
-**16:9-adjusted DAR (NTSC):** 640 * (40/33) / 480 = <span style="text-decoration:underline;">160:99</span>
-
-
-## <span style="text-decoration:underline;">650px Games (Ex. Tony Hawk’s Pro Skater 4)</span>
-
-**Resolution (NTSC):** 650x448  
-**Storage Aspect Ratio (SAR):** 325:224  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 650 * (10/11) / 448 = <span style="text-decoration:underline;">1625:1232</span>   
-
-## <span style="text-decoration:underline;">656px Games (Ex. Prince of Persia: The Two Thrones)</span>
-
-**Resolution (NTSC):** 656x448  
-**Storage Aspect Ratio (SAR):** 41:28  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 656 * (10/11) / 448 = <span style="text-decoration:underline;">205:154</span> 
-
-## <span style="text-decoration:underline;">660px Games (Ex. Super Mario Sunshine, Animal Crossing, Wind Waker)</span>
-
-**Resolution (NTSC):** 660x232  
-**Storage Aspect Ratio (SAR):** 165:58  
-**Pixel Aspect Ratio (PAR):**  5:11  
-**4:3-adjusted DAR (NTSC):** 660 * (5/11) / 232 = <span style="text-decoration:underline;">75:58</span>
-
-**Resolution (NTSC):** 660x448  
-**Storage Aspect Ratio (SAR):** 165:112  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 660 * (10/11) / 448 = <span style="text-decoration:underline;">75:56</span>
-
-**Resolution (NTSC):** 660x464  
-**Storage Aspect Ratio (SAR):** 165:116  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 660 * (10/11) / 464 = <span style="text-decoration:underline;">75:58</span> 
-
-**Resolution (NTSC):** 660x480  
-**Storage Aspect Ratio (SAR):** 11:8  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 660 * (10/11) / 480 = <span style="text-decoration:underline;">5:4</span> 
-
-## <span style="text-decoration:underline;">666px Games (Ex. Double Dash, Twilight Princess)</span>
-
-**Resolution (NTSC):** 666x448  
-**Storage Aspect Ratio (SAR):** 333:224  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 666 * (10/11) / 448 = <span style="text-decoration:underline;">1665:1232</span>
-
-## <span style="text-decoration:underline;">670px Games (Ex. Most Wii games in Standard 4:3)</span>
-
-### Standard 4:3  
-**Resolution (NTSC):** 670x448  
-**Storage Aspect Ratio (SAR):** 335:224  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 670 * (10/11) / 448 = <span style="text-decoration:underline;">1675:1232</span>
-
-**Resolution (NTSC):** 670x456  
-**Storage Aspect Ratio (SAR):** 335:228  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 670 * (10/11) / 456 = <span style="text-decoration:underline;">1675:1254</span>
-
-**Resolution (NTSC):** 670x480  
-**Storage Aspect Ratio (SAR):** 67:48  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 670 * (10/11) / 480 = <span style="text-decoration:underline;">335:264</span>
+**4:3-adjusted DAR (NTSC):** 720 * (10/11) / 480 = <span style="text-decoration:underline;">15:11</span>
 
 ### Anamorphic Widescreen  
-**Resolution (NTSC):** 670x456  
-**Storage Aspect Ratio (SAR):** 335:228  
-**Pixel Aspect Ratio (PAR):** 40:33  
-**16:9-adjusted DAR (NTSC):** 670 * (40/33) / 456 = <span style="text-decoration:underline;">3350:1881</span>
-
-**Resolution (NTSC):** 670x480  
-**Storage Aspect Ratio (SAR):** 67:48  
-**Pixel Aspect Ratio (PAR):** 40:33  
-**16:9-adjusted DAR (NTSC):** 670 * (40/33) / 480 = <span style="text-decoration:underline;">335:198</span>
-
-## <span style="text-decoration:underline;">672px Games (Ex. ToS: Dawn of a New World in Anamorphic Widescreen)</span>
-
-**Resolution (NTSC):** 672x448  
+**Resolution (NTSC):** 720x480  
 **Storage Aspect Ratio (SAR):** 3:2  
 **Pixel Aspect Ratio (PAR):** 40:33  
-**16:9-adjusted DAR (NTSC):** 672 * (40/33) / 448 = <span style="text-decoration:underline;">20:11</span>
-
-## <span style="text-decoration:underline;">686px Games (Ex. Most Wii games in Anamorphic Widescreen)</span>
-
-**Resolution (NTSC):** 686x448  
-**Storage Aspect Ratio (SAR):** 49:32  
-**Pixel Aspect Ratio (PAR):** 40:33  
-**16:9-adjusted DAR (NTSC):** 686 * (40/33) / 480 = <span style="text-decoration:underline;">245:132</span>
-
-**Resolution (NTSC):** 686x456  
-**Storage Aspect Ratio (SAR):** 343:228  
-**Pixel Aspect Ratio (PAR):** 40:33  
-**16:9-adjusted DAR (NTSC):** 686 * (40/33) / 456 = <span style="text-decoration:underline;">3430:1881</span>
-
-**Resolution (NTSC):** 686x480  
-**Storage Aspect Ratio (SAR):** 343:240  
-**Pixel Aspect Ratio (PAR):** 40:33  
-**16:9-adjusted DAR (NTSC):** 686 * (40/33) / 448 = <span style="text-decoration:underline;">343:198</span>
-
-## <span style="text-decoration:underline;">704px Games (Ex. Ocarina of Time/Master Quest, Majora’s Mask)</span>
-
-**Resolution (NTSC):** 704x480  
-**Storage Aspect Ratio (SAR):** 22:15  
-**Pixel Aspect Ratio (PAR):** 10:11  
-**4:3-adjusted DAR (NTSC):** 704 * (10/11) / 480 = <span style="text-decoration:underline;">4:3</span>  
+**4:3-adjusted DAR (NTSC):** 720 * (40:33) / 480 = <span style="text-decoration:underline;">20:11</span>
 
 # References
 ### FirebrandX
