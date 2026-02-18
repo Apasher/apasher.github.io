@@ -8,15 +8,15 @@ categories: retro-gaming game-capture
 tags: Game-Capture
 ---
 
-<span style="text-decoration:underline;">UPDATE 2026/02/12:</span> I have updated the math and final aspect ratio values to be more accurate. The previous misleading numbers were given under the assumption that you always need to round to the nearest even pixel, but this is something you should only do on the final possible output. The values I previously gave were rounded values assuming a 1x scale factor, but the more you increase the scale factor, the bigger the discrepancy between the accurate aspect ratio and the rounded aspect ratio from 1x. In short, the aspect ratio should be corrected on the final possible output to ensure maximum fidelity. Apologies for the previous inaccurate information.
+**DISCLAIMERS, PLEASE READ FIRST BEFORE PROCEEDING:** This guide is not intended to be an end-all-be-all hard-defined set rule to police people on how to enjoy and capture their games, but rather a guideline to follow as well as a resource that is easily accessible for those who wish to seek out this information.
 
-**DISCLAIMERS, PLEASE READ FIRST BEFORE PROCEEDING:** This will give you an accurate representation of the aspect ratio you will see on a *perfectly calibrated* CRT TV. Do keep in mind that CRT displays are old imperfect analog displays and likely haven’t been calibrated in 20 years, so what you may see on your CRT may not represent what you will see on a *perfectly calibrated* CRT.
+The following will give you an accurate representation of the aspect ratio you will see on a *perfectly calibrated* CRT TV. Do keep in mind that CRT displays are old imperfect analog displays and likely haven’t been calibrated in 20 years, so what you may see on your CRT may not represent what you will see on a *perfectly calibrated* CRT.
 
 The final values given may result in a horizontal resolution that is not a whole number depending on how you upscale your game capture. You generally want to avoid uneven pixels to assure pixel uniformity so it is best practice to round to the nearest even pixel, but the value you round to could result in a final DAR that may differ depending on your scale factor. Aspect ratios are never 100% perfect, CRTs are not perfect displays, and there will always be “close enoughs” when it comes to aspect ratios from the analog era.
 
-This guide is not intended to be an end-all-be-all hard-defined set rule to police people on how to enjoy and capture their games, but rather a guideline to follow as well as a resource that is easily accessible for those who wish to seek out this information.
-
 This guide will mainly be focused on NTSC, but I will update this page with complete information for PAL in the future.
+
+<span style="text-decoration:underline;">UPDATE 2026/02/12:</span> I have updated the math and final aspect ratio values to be more accurate. The previous misleading numbers were given under the assumption that you always need to round to the nearest even pixel, but this is something you should only do on the final possible output. The values I previously gave were rounded values assuming a 1x scale factor, but the more you increase the scale factor, the bigger the discrepancy between the accurate aspect ratio and the rounded aspect ratio from 1x. In short, the aspect ratio should be corrected on the final possible output to ensure maximum fidelity. Apologies for the previous inaccurate information.
 
 # Introduction and Explanation
 
