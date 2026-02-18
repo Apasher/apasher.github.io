@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Your Aspect Ratio is Wrong"
-description: A guide to aspect ratio correction for retro console games
+title: "How to Correct the Aspect Ratio for Analog TV-era Console Games"
 date: 2026-01-03 00:17:00 -0500
 author: Apasher
 categories: retro-gaming game-capture
@@ -9,6 +8,14 @@ tags: Game-Capture
 ---
 
 <span style="text-decoration:underline;">UPDATE 2026/02/12:</span> I have updated the math and final aspect ratio values to be more accurate. The previous misleading numbers were given under the assumption that you always need to round to the nearest even pixel, but this is something you should only do on the final possible output. The values I previously gave were rounded values assuming a 1x scale factor, but the more you increase the scale factor, the bigger the discrepancy between the accurate aspect ratio and the rounded aspect ratio from 1x. In short, the aspect ratio should be corrected on the final possible output to ensure maximum fidelity. Apologies for the previous inaccurate information.
+
+**DISCLAIMERS, PLEASE READ FIRST BEFORE PROCEEDING:** This will give you an accurate representation of the aspect ratio you will see on a *perfectly calibrated* CRT TV. Do keep in mind that CRT displays are old imperfect analog displays and likely haven’t been calibrated in 20 years, so what you may see on your CRT may not represent what you will see on a *perfectly calibrated* CRT.
+
+The final values given may result in a horizontal resolution that is not a whole number depending on how you upscale your game capture. You generally want to avoid uneven pixels to assure pixel uniformity so it is best practice to round to the nearest even pixel, but the value you round to could result in a final DAR that may differ depending on your scale factor. Aspect ratios are never 100% perfect, CRTs are not perfect displays, and there will always be “close enoughs” when it comes to aspect ratios from the analog era.
+
+This guide is not intended to be an end-all-be-all hard-defined set rule, but rather a guideline to follow as well as a resource that is easily accessible for those who wish to seek out this information.
+
+This guide will mainly be focused on NTSC, but I will update this page with complete information for PAL in the future.
 
 # Introduction and Explanation
 
@@ -25,12 +32,6 @@ When it comes to aspect ratios for retro console games, it’s important to keep
 There are two different camps that people often take when it comes to aspect ratio correction: one is to keep pixels square to have their game capture as sharp as possible, and the other is to have an accurate representation of what you see on a CRT TV. As mentioned before, most retro game consoles do not output square pixels. However when a game’s SAR matches with the console’s PAR, you get square pixels. Pin Eight has a page documenting the [dot clock frequencies of each console](https://pineight.com/mw/page/Dot_clock_rates.xhtml), with calculations of their PAR included. To give an example: most NES games output a resolution of 256x224, which gives a SAR of 8:7. And according to Pin Eight, the dot clock frequency for the NES, SNES, and many other consoles from that generation is ~5.37MHz (Exact: 945/176 MHz). When dividing the NTSC square pixel clock rate of ~6.14 MHz for 240p (Exact: 135/22 MHz) by the console’s dot clock frequency, this equates to a PAR of ~1.143:1, or 8:7. So displaying a game in an integer scale of 256x224 in your game capture will give you square pixels. Easy, right? Well here’s where things get complicated. When you look at a game-by-game basis, you will notice that some SNES games had their geometry designed for square pixels, while other games accounted for how a CRT TV interpolates the image to a 4:3 frame. And when you get to later consoles like the GameCube, you will notice that the games were not designed to be viewed with square pixels at all. The point is: for some games, capturing in square pixels is perfectly valid. But for some other games, you will not have the intended geometry by capturing in square pixels. So you will have to judge by a game-by-game case whether square pixels are appropriate or not.
 
 So what if you want your game capture to accurately represent what you see on a CRT TV? Well you just stretch it to 4:3 and call it a day, right? After all, that’s what actual CRT TVs do. They interpolate the image to 4:3, so that’s what I should do right? Well, that’s something that most people get wrong. Most people like to crop out the black borders surrounding the image, and then stretch the active game graphics to 4:3. While it is a convenient way to correct aspect ratio, it’s actually not accurate to what you see on a CRT. **It’s not just the active game graphics that get interpolated to 4:3 on a CRT TV. It’s the active game graphics <span style="text-decoration:underline;">plus</span> overscan padding.** So how do you get the correct CRT-accurate aspect ratio in your game capture? Simple, [FirebrandX](https://www.firebrandx.com/) came up with an easy formula that involves taking the horizontal resolution of a game, and multiplying it by the console’s PAR. Alternatively; you can multiply the vertical resolution by the PAR's reciprocal so you can overscan into a standard 4:3 frame, and for consoles that follow the Rec. 601 standard (ie. the GameCube and Wii,) you don’t have to do any calculation whatsoever. You can just capture the 720x480 frame, crop the center to 704x480, and scale it to 4:3. Ste from [HD Retrovision](https://www.hdretrovision.com/) has a [more complex formula](https://cdn.retrorgb.com/wp-content/uploads/2019/02/horiz_correction_factor.png), but for this guide we will be sticking with the FirebrandX formula. Do keep in mind that just like presenting games in square pixels, whether the in-game geometry will look correct or not will completely depend on the game. There are cases where if a game’s SAR is 4:3, that it’s actually desirable to retain its 4:3 aspect ratio, even if it’s not what you see on a CRT. From here on out, I will be giving details for each console on how to correct the aspect ratio for their perspective games. 
-
-**Disclaimers:** This guide will mainly be focused on NTSC, but I will update this page with complete information for PAL in the future.
-
-This will give you an accurate representation of the aspect ratio you will see on a *perfectly calibrated* CRT TV. Do keep in mind that CRT displays are old imperfect analog displays and likely haven’t been calibrated in 20 years, so what you may see on your CRT may not represent what you will see on a *perfectly calibrated* CRT.
-
-The final values given may result in a horizontal resolution that is not a whole number depending on how you upscale your game capture. You generally want to avoid uneven pixels to assure pixel uniformity so it is best practice to round to the nearest even pixel, but the value you round to could result in a final DAR that may differ depending on your scale factor. Aspect ratios are never 100% perfect, CRTs are not perfect displays, and there will always be “close enoughs” when it comes to aspect ratios from the analog era.
 
 # NES/SNES
 
