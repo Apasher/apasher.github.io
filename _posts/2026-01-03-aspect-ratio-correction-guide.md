@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Correct the Aspect Ratio for Analog TV-era Console Games"
+description: 
 date: 2026-01-03 00:17:00 -0500
 author: Apasher
 categories: retro-gaming game-capture
@@ -13,7 +14,7 @@ tags: Game-Capture
 
 The final values given may result in a horizontal resolution that is not a whole number depending on how you upscale your game capture. You generally want to avoid uneven pixels to assure pixel uniformity so it is best practice to round to the nearest even pixel, but the value you round to could result in a final DAR that may differ depending on your scale factor. Aspect ratios are never 100% perfect, CRTs are not perfect displays, and there will always be “close enoughs” when it comes to aspect ratios from the analog era.
 
-This guide is not intended to be an end-all-be-all hard-defined set rule, but rather a guideline to follow as well as a resource that is easily accessible for those who wish to seek out this information.
+This guide is not intended to be an end-all-be-all hard-defined set rule to police people on how to enjoy and capture their games, but rather a guideline to follow as well as a resource that is easily accessible for those who wish to seek out this information.
 
 This guide will mainly be focused on NTSC, but I will update this page with complete information for PAL in the future.
 
