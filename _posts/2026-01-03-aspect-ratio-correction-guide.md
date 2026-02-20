@@ -8,7 +8,9 @@ categories: retro-gaming game-capture
 tags: Game-Capture
 ---
 
-**DISCLAIMERS, PLEASE READ FIRST BEFORE PROCEEDING:** This guide is not intended to be an end-all-be-all hard-defined set rule to police people on how to enjoy and capture their games, but rather a guideline to follow as well as a resource that is easily accessible for those who wish to seek out this information.
+# Disclaimers (Important)
+
+This guide is not intended to be an end-all-be-all hard-defined set rule to police people on how to enjoy and capture their games, but rather a guideline to follow as well as a resource that is easily accessible for those who wish to seek out this information.
 
 The following will give you an accurate representation of the aspect ratio you will see on a *perfectly calibrated* CRT TV. Do keep in mind that CRT displays are old imperfect analog displays and likely haven’t been calibrated in 20 years, so what you may see on your CRT may not represent what you will see on a *perfectly calibrated* CRT.
 
